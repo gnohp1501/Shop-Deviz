@@ -7,14 +7,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="registryservice" />
+        <module name="gatewayservice" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="gatewayservice" target="11" />
       <module name="registryservice" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gatewayservice" options="-parameters" />
       <module name="registryservice" options="-parameters" />
     </option>
   </component>
