@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.example.shopdeviz.databinding.ActivityMainBinding
+import com.example.shopdeviz.presentation.common.NavigationManager
 import com.example.shopdeviz.presentation.viewmodel.ProductViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
         NavigationUI.setupWithNavController(binding.navigation, navController)
-
+        val navigationManager: NavigationManager = NavigationManager.instance
+        navigationManager.navController = navController
     }
 }
