@@ -23,4 +23,13 @@ abstract class BaseFragment<VB : ViewBinding>
             return it.root
         } ?: throw IllegalArgumentException("Binding variable is null")
     }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    open fun onBackPressed(): Boolean {
+        return false
+    }
 }
