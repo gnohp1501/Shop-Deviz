@@ -7,13 +7,12 @@ import androidx.cardview.widget.CardView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.shopdeviz.MainActivity
 import com.example.shopdeviz.R
-import com.example.shopdeviz.databinding.FragmentSplashStep1Binding
+import com.example.shopdeviz.databinding.IntroduceScreenBinding
 import com.example.shopdeviz.presentation.adapter.ViewPagerAdapter
 import com.example.shopdeviz.presentation.common.BaseFragment
-import com.example.shopdeviz.presentation.common.NavigationManager
 
 class IntroduceScreen :
-    BaseFragment<FragmentSplashStep1Binding>(FragmentSplashStep1Binding::inflate) {
+    BaseFragment<IntroduceScreenBinding>(IntroduceScreenBinding::inflate) {
 
     private var hashmap: HashMap<Int, CardView> = hashMapOf()
     private var resource = context?.resources

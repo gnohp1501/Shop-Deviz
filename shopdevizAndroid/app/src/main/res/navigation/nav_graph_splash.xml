@@ -9,7 +9,7 @@
         android:id="@+id/splashScreen"
         android:name="com.example.shopdeviz.presentation.ui.splashscreen.SplashScreen"
         android:label="fragment_splash"
-        tools:layout="@layout/fragment_splash">
+        tools:layout="@layout/splash_screen">
         <action
             android:id="@+id/introduceScreen"
             app:destination="@id/introduceScreen" />
@@ -18,5 +18,5 @@
         android:id="@+id/introduceScreen"
         android:name="com.example.shopdeviz.presentation.ui.splashscreen.IntroduceScreen"
         android:label="fragment_splash_step1"
-        tools:layout="@layout/fragment_splash_step1" />
+        tools:layout="@layout/introduce_screen" />
 </navigation>

@@ -34,4 +34,5 @@ class SplashActivity : AppCompatActivity() {
         navigationManager.navController = navController
 
     }
+
 }
