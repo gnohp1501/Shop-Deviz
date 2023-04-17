@@ -11,6 +11,7 @@ abstract class BaseFragment<VB : ViewBinding>
     (
     private val bindingInflater: (LayoutInflater) -> VB
 ) : Fragment() {
+
     private var _binding: VB? = null
     open val binding: VB
         get() = _binding as VB
@@ -29,7 +30,4 @@ abstract class BaseFragment<VB : ViewBinding>
         _binding = null
     }
 
-    open fun onBackPressed(): Boolean {
-        return false
-    }
 }

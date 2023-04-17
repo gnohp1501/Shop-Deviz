@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="6"
-    tools:context=".presentation.ui.splashscreen.IntroduceScreen">
+    android:background="@color/white"
+    tools:context=".presentation.ui.splashscreen.IntroduceFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/intro"

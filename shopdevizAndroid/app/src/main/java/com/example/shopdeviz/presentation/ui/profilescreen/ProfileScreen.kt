@@ -1,4 +1,4 @@
-package com.example.shopdeviz.presentation.ui
+package com.example.shopdeviz.presentation.ui.profilescreen
 
 import com.example.shopdeviz.databinding.HomeScreenBinding
 import com.example.shopdeviz.databinding.ProfileScreenBinding

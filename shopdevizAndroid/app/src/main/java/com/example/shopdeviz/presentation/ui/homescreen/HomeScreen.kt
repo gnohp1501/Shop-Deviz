@@ -1,7 +1,5 @@
-package com.example.shopdeviz.presentation.ui
+package com.example.shopdeviz.presentation.ui.homescreen
 
-import android.os.Bundle
-import android.view.View
 import com.example.shopdeviz.databinding.HomeScreenBinding
 import com.example.shopdeviz.presentation.common.BaseFragment
 

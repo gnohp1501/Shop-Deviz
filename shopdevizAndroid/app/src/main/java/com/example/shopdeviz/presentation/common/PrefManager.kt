@@ -8,7 +8,6 @@ class PrefManager(var _context: Context) {
     var pref: SharedPreferences
     var editor: SharedPreferences.Editor
 
-    // shared pref mode
     var PRIVATE_MODE = 0
 
     init {
@@ -24,7 +23,6 @@ class PrefManager(var _context: Context) {
         }
 
     companion object {
-        // Shared preferences file name
         private const val PREF_NAME = "androidhive-welcome"
         private const val IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch"
     }

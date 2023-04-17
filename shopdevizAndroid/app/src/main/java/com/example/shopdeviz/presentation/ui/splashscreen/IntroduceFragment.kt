@@ -1,21 +1,29 @@
 package com.example.shopdeviz.presentation.ui.splashscreen
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.cardview.widget.CardView
 import androidx.viewpager2.widget.ViewPager2
-import com.example.shopdeviz.MainActivity
 import com.example.shopdeviz.R
-import com.example.shopdeviz.databinding.IntroduceScreenBinding
+import com.example.shopdeviz.databinding.IntroduceFragmentBinding
 import com.example.shopdeviz.presentation.adapter.ViewPagerAdapter
 import com.example.shopdeviz.presentation.common.BaseFragment
 
-class IntroduceScreen :
-    BaseFragment<IntroduceScreenBinding>(IntroduceScreenBinding::inflate) {
+class IntroduceFragment :
+    BaseFragment<IntroduceFragmentBinding>(IntroduceFragmentBinding::inflate) {
 
     private var hashmap: HashMap<Int, CardView> = hashMapOf()
     private var resource = context?.resources
+
+    lateinit var onDoneIntroduce: () -> Unit
+
+    companion object {
+        fun newInstance(onDoneIntroduce: () -> Unit): IntroduceFragment {
+            val fragment = IntroduceFragment()
+            fragment.onDoneIntroduce = onDoneIntroduce
+            return fragment
+        }
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -64,9 +72,7 @@ class IntroduceScreen :
         if (binding.intro.currentItem < ViewPagerAdapter().itemCount - 1) {
             binding.intro.currentItem = binding.intro.currentItem + 1
         } else {
-            activity?.let {
-                it.startActivity(Intent(it, MainActivity::class.java))
-            }
+            onDoneIntroduce.invoke()
         }
     }
 
