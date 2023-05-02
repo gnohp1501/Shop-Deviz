@@ -1,6 +1,7 @@
 package com.example.shopdeviz.presentation.ui.splashscreen
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.cardview.widget.CardView
 import androidx.viewpager2.widget.ViewPager2
@@ -8,6 +9,7 @@ import com.example.shopdeviz.R
 import com.example.shopdeviz.databinding.IntroduceFragmentBinding
 import com.example.shopdeviz.presentation.adapter.ViewPagerAdapter
 import com.example.shopdeviz.presentation.common.BaseFragment
+import com.example.shopdeviz.presentation.ui.view.IButtonLargeCallback
 
 class IntroduceFragment :
     BaseFragment<IntroduceFragmentBinding>(IntroduceFragmentBinding::inflate) {
@@ -31,9 +33,15 @@ class IntroduceFragment :
         resource = context?.resources
         binding.intro.adapter = ViewPagerAdapter()
 
-        binding.introduceButton.setOnClickListener {
-            buttonIntroduceClick()
-        }
+        binding.nextButton.onClick(
+            object : IButtonLargeCallback {
+                override fun onClick() {
+                    Log.d("123123:13", "Asdsadsad")
+                }
+            }
+        )
+
+        binding.getStartedButton.setOnClickListener { buttonGetStartedClick() }
 
         binding.intro.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrolled(
@@ -52,9 +60,6 @@ class IntroduceFragment :
     }
 
     fun changeIndicator() {
-        binding.introduceButton.text =
-            if (binding.intro.currentItem < 2) resource?.getString(R.string.nextLabel)
-            else resource?.getString(R.string.getStartedLabel)
         for (i in hashmap.keys) {
             val params = hashmap[i]?.layoutParams
             if (i == binding.intro.currentItem) {
@@ -68,12 +73,16 @@ class IntroduceFragment :
         }
     }
 
-    private fun buttonIntroduceClick() {
-        if (binding.intro.currentItem < ViewPagerAdapter().itemCount - 1) {
-            binding.intro.currentItem = binding.intro.currentItem + 1
-        } else {
-            onDoneIntroduce.invoke()
+    private fun buttonNextClick() {
+        binding.intro.currentItem = binding.intro.currentItem + 1
+        if (binding.intro.currentItem == 2) {
+            binding.nextButton.visibility = View.GONE
+            binding.getStartedButton.visibility = View.VISIBLE
         }
+    }
+
+    private fun buttonGetStartedClick() {
+        onDoneIntroduce.invoke()
     }
 
 }

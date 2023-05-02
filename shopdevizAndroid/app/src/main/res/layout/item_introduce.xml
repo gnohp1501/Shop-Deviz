@@ -16,8 +16,6 @@
         android:layout_below="@id/image_intro"
         android:layout_marginHorizontal="@dimen/_20sdp"
         android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="@dimen/_30sdp"
-        android:textStyle="bold" />
+        android:textSize="@dimen/_30sdp" />
 
 </RelativeLayout>

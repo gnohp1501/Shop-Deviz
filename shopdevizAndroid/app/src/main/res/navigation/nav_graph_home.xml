@@ -13,9 +13,21 @@
         <action
             android:id="@+id/action_splashScreen_to_mainScreen"
             app:destination="@id/mainScreen" />
+        <action
+            android:id="@+id/action_splashScreen_to_authenScreen"
+            app:destination="@id/authenScreen" />
     </fragment>
     <fragment
         android:id="@+id/mainScreen"
         android:name="com.example.shopdeviz.presentation.ui.mainscreen.MainScreen"
         android:label="MainScreen" />
+    <fragment
+        android:id="@+id/authenScreen"
+        android:name="com.example.shopdeviz.presentation.ui.authenscreen.AuthenScreen"
+        android:label="authen_screen"
+        tools:layout="@layout/authen_screen" >
+        <action
+            android:id="@+id/action_authenScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
 </navigation>

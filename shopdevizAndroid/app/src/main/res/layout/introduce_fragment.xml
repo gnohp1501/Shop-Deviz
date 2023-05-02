@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical"
     android:weightSum="6"
-    android:background="@color/white"
     tools:context=".presentation.ui.splashscreen.IntroduceFragment">
 
     <androidx.viewpager2.widget.ViewPager2
@@ -54,21 +54,19 @@
 
     </LinearLayout>
 
-    <LinearLayout
+
+    <com.example.shopdeviz.presentation.ui.view.ButtonLarge
+        android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5">
+        android:visibility="visible"
+        app:tvButton="@string/next" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/introduce_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="@dimen/_20sdp"
-            android:background="@drawable/rounded_corner_button"
-            android:text="@string/nextLabel"
-            android:textAllCaps="false"
-            android:textColor="@color/white" />
-    </LinearLayout>
+    <com.example.shopdeviz.presentation.ui.view.ButtonLarge
+        android:id="@+id/getStartedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:tvButton="@string/get_started" />
 
 </LinearLayout>

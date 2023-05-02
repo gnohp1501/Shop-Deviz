@@ -14,12 +14,17 @@ class SplashCustomScreen :
         super.onViewCreated(view, savedInstanceState)
         parentFragmentManager.beginTransaction().add(
             R.id.frlSplashScreen, SplashFragment.newInstance(onDoneSplash = {
-                parentFragmentManager.beginTransaction().replace(
-                    R.id.frlSplashScreen, IntroduceFragment.newInstance(onDoneIntroduce = {
-                        Navigation.findNavController(view)
-                            .navigate(R.id.action_splashScreen_to_mainScreen)
-                    })
-                ).commit()
+                if (1 == 2) {
+                    Navigation.findNavController(view)
+                        .navigate(R.id.action_splashScreen_to_authenScreen)
+                } else {
+                    parentFragmentManager.beginTransaction().replace(
+                        R.id.frlSplashScreen, IntroduceFragment.newInstance(onDoneIntroduce = {
+                            Navigation.findNavController(view)
+                                .navigate(R.id.action_splashScreen_to_mainScreen)
+                        })
+                    ).commit()
+                }
             })
         ).commit()
     }

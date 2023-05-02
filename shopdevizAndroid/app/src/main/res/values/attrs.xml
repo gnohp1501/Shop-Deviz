@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ItemOptionLogin">
+        <attr name="src" format="reference" />
+        <attr name="tvOption" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="ButtonLarge">
+        <attr name="tvButton" format="string" />
+    </declare-styleable>
+</resources>
