@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 
 class SplashFragment : BaseFragment<FragmentSplashBinding>(FragmentSplashBinding::inflate) {
 
-    lateinit var onDoneSplash:() ->Unit
+    lateinit var onDoneSplash: () -> Unit
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
@@ -36,7 +36,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(FragmentSplashBinding
     }
 
     companion object {
-        fun newInstance(onDoneSplash:() -> Unit ): SplashFragment {
+        fun newInstance(onDoneSplash: () -> Unit): SplashFragment {
             var fragment = SplashFragment()
             fragment.onDoneSplash = onDoneSplash
             return fragment

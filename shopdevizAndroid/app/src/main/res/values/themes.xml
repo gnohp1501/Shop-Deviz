@@ -12,6 +12,9 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="android:fontFamily">@font/robotoregular</item>
+        <item name="fontFamily">@font/robotoregular</item> <!-- target android sdk versions < 26 and > 14 if theme other than AppCompat -->
+        <item name="android:textColor">@color/black</item>
     </style>
 
     <style name="GenericProgressBackground" parent="android:Theme">
