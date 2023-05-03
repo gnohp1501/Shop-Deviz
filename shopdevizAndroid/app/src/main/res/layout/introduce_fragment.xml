@@ -6,19 +6,17 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    android:weightSum="6"
     tools:context=".presentation.ui.splashscreen.IntroduceFragment">
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/intro"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5" />
+        android:layout_weight="1" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
         android:backgroundTint="@null"
         android:gravity="center"
         android:orientation="horizontal">
@@ -28,7 +26,7 @@
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
             app:cardBackgroundColor="@color/silver"
-            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
             app:cardElevation="0dp">
 
         </androidx.cardview.widget.CardView>
@@ -38,7 +36,7 @@
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
             android:layout_margin="@dimen/_10sdp"
-            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
             app:cardElevation="0dp">
 
         </androidx.cardview.widget.CardView>
@@ -47,7 +45,7 @@
             android:id="@+id/cv3"
             android:layout_width="@dimen/_10sdp"
             android:layout_height="@dimen/_10sdp"
-            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardCornerRadius="@dimen/_5sdp"
             app:cardElevation="0dp">
 
         </androidx.cardview.widget.CardView>
@@ -59,6 +57,7 @@
         android:id="@+id/nextButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
         android:visibility="visible"
         app:tvButton="@string/next" />
 
@@ -66,6 +65,7 @@
         android:id="@+id/getStartedButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="@dimen/_20sdp"
         android:visibility="gone"
         app:tvButton="@string/get_started" />
 

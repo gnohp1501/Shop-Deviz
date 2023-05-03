@@ -37,7 +37,7 @@ class SplashFragment : BaseFragment<FragmentSplashBinding>(FragmentSplashBinding
 
     companion object {
         fun newInstance(onDoneSplash: () -> Unit): SplashFragment {
-            var fragment = SplashFragment()
+            val fragment = SplashFragment()
             fragment.onDoneSplash = onDoneSplash
             return fragment
         }
