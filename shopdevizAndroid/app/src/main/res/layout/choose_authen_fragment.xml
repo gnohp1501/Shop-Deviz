@@ -46,6 +46,16 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
+    <com.example.shopdeviz.presentation.ui.view.TextDivide
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        app:tvTextDivide="@string/or" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
     <com.example.shopdeviz.presentation.ui.view.ButtonLarge
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

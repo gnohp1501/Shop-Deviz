@@ -8,4 +8,8 @@
     <declare-styleable name="ButtonLarge">
         <attr name="tvButton" format="string" />
     </declare-styleable>
+
+    <declare-styleable name="TextDivide">
+        <attr name="tvTextDivide" format="string" />
+    </declare-styleable>
 </resources>

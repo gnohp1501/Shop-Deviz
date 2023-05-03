@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import com.example.shopdeviz.R
 import com.example.shopdeviz.databinding.ButtonLargeBinding
+import com.example.shopdeviz.databinding.TextDivideBinding
 
 
-class ButtonLarge : LinearLayout {
-    private var _binding: ButtonLargeBinding? = null
+class TextDivide : LinearLayout {
+    private var _binding: TextDivideBinding? = null
     private val binding get() = _binding!!
-
-    private var callback: IButtonLargeCallback? = null
 
     constructor(context: Context) : super(context) {
         initView()
@@ -32,32 +31,21 @@ class ButtonLarge : LinearLayout {
     }
 
     init {
-        _binding = ButtonLargeBinding.inflate(LayoutInflater.from(context), this, true)
-        binding.tvButton.setOnClickListener {
-            callback?.onClick()
-        }
-    }
-
-    fun onClick(listener: IButtonLargeCallback) {
-        callback = listener
+        _binding = TextDivideBinding.inflate(LayoutInflater.from(context), this, true)
     }
 
     private fun initView() {
-        inflate(context, R.layout.button_large, this)
+        inflate(context, R.layout.text_divide, this)
     }
 
     private fun configUI(attributeSet: AttributeSet? = null) {
         val typedArray =
-            context.theme.obtainStyledAttributes(attributeSet, R.styleable.ButtonLarge, 0, 0)
-        if (typedArray.hasValue(R.styleable.ButtonLarge_tvButton)) {
-            val tvButton = typedArray.getString(R.styleable.ButtonLarge_tvButton)
-            binding.tvButton.text = tvButton
+            context.theme.obtainStyledAttributes(attributeSet, R.styleable.TextDivide, 0, 0)
+        if (typedArray.hasValue(R.styleable.TextDivide_tvTextDivide)) {
+            val tvButton = typedArray.getString(R.styleable.TextDivide_tvTextDivide)
+            binding.tvTextDivide.text = tvButton
         }
         typedArray.recycle()
     }
 
-}
-
-interface IButtonLargeCallback {
-    fun onClick()
 }

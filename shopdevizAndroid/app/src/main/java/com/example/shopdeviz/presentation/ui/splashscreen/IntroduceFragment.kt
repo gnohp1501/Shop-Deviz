@@ -36,12 +36,18 @@ class IntroduceFragment :
         binding.nextButton.onClick(
             object : IButtonLargeCallback {
                 override fun onClick() {
-                    Log.d("123123:13", "Asdsadsad")
+                    buttonNextClick()
                 }
             }
         )
 
-        binding.getStartedButton.setOnClickListener { buttonGetStartedClick() }
+        binding.getStartedButton.onClick(
+            object : IButtonLargeCallback {
+                override fun onClick() {
+                    buttonGetStartedClick()
+                }
+            }
+        )
 
         binding.intro.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageScrolled(
@@ -64,10 +70,8 @@ class IntroduceFragment :
             val params = hashmap[i]?.layoutParams
             if (i == binding.intro.currentItem) {
                 hashmap[i]?.setCardBackgroundColor(resource?.getColor(R.color.black) ?: 0)
-                params?.width = resource?.getDimensionPixelOffset(R.dimen._30sdp)
             } else {
                 hashmap[i]?.setCardBackgroundColor(resource?.getColor(R.color.silver) ?: 0)
-                params?.width = resource?.getDimensionPixelOffset(R.dimen._10sdp)
             }
             hashmap[i]?.layoutParams = params
         }
