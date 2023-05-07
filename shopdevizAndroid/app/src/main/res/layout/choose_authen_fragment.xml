@@ -5,11 +5,11 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    android:padding="@dimen/_20sdp">
+    android:padding="@dimen/space_huge">
 
     <ImageView
-        android:layout_width="@dimen/_200sdp"
-        android:layout_height="@dimen/_200sdp"
+        android:layout_width="@dimen/size_image_huge"
+        android:layout_height="@dimen/size_image_huge"
         android:layout_gravity="center"
         android:src="@drawable/logo_nike_dark" />
 
@@ -19,24 +19,25 @@
         android:fontFamily="@font/robotobold"
         android:text="@string/lets_you_in"
         android:textAlignment="center"
-        android:textSize="@dimen/_50sdp" />
+        android:textSize="@dimen/size_text_special" />
 
     <com.example.shopdeviz.presentation.ui.view.ItemOptionLogin
         android:id="@+id/btnFacebook"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height_large"
         app:src="@drawable/facebook"
         app:tvOption="@string/continue_with_facebook" />
 
     <com.example.shopdeviz.presentation.ui.view.ItemOptionLogin
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height_large"
+        android:layout_marginVertical="@dimen/space_huge"
         app:src="@drawable/google"
         app:tvOption="@string/continue_with_google" />
 
     <com.example.shopdeviz.presentation.ui.view.ItemOptionLogin
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="@dimen/button_height_large"
         app:src="@drawable/apple"
         app:tvOption="@string/continue_with_apple" />
 
@@ -48,7 +49,7 @@
 
     <com.example.shopdeviz.presentation.ui.view.TextDivide
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_20sdp"
+        android:layout_height="@dimen/space_huge"
         app:tvTextDivide="@string/or" />
 
     <TextView
@@ -70,7 +71,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/space_medium"
             android:text="@string/dont_have_an_account"
             android:textAlignment="center"
             android:textColor="@color/silver" />

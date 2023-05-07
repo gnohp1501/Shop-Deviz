@@ -15,11 +15,11 @@
         android:id="@+id/tvTextDivide"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/_20sdp"
-        android:lineHeight="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/space_huge"
+        android:lineHeight="@dimen/space_huge"
         android:text="avc"
         android:textAllCaps="true"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
     <View
         android:layout_width="match_parent"
