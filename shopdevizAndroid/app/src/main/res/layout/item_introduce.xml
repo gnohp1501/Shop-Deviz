@@ -6,16 +6,16 @@
     <ImageView
         android:id="@+id/image_intro"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_400sdp"
-        android:scaleType="centerCrop" />
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter" />
 
     <TextView
         android:id="@+id/text_intro"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/image_intro"
-        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginHorizontal="@dimen/space_huge"
         android:gravity="center"
-        android:textSize="@dimen/_30sdp" />
+        android:textSize="@dimen/size_text_large" />
 
 </RelativeLayout>
